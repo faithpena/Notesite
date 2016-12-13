@@ -1,0 +1,24 @@
+As a guest, I can:
+	view homepage - *
+	view products - *
+	sign up - *
+As a user, I can:
+	log in - *
+	log out - *
+	add to cart - *
+	view my products (in my cart) - *
+	update cart - *
+	delete stuff from cart - *
+	check out - *
+	view user profile - *
+	edit user profile - *
+	edit password - *
+	view order history 
+As an admin, I can:
+	log in - *
+	log out - *
+	add product - *
+	edit product - *
+	delete product - *
+	see list of users - *
+	edit password - *
