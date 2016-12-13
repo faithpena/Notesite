@@ -9,7 +9,7 @@ $DBH = new PDO("pgsql:host=ec2-54-235-168-152.compute-1.amazonaws.com;port=5432;
 		$data = array('username' => $username, 'password' => $password, 'email' => $email, 'firstname' => $firstname, 'lastname' => $lastname, 'sex' => $sex, 'birthdate' => $year . '-' . $month . '-' . $day);
 
 		# Prepare the query
-		$STH = $DBH->prepare('INSERT INTO "users" (username, password, email, firstname, lastname, sex, birthdate) VALUES (:username, :password, :email, :firstname, :lastname, :sex, :birthdate)');
+		$STH = $DBH->prepare("INSERT INTO users (username, password, email, firstname, lastname, sex, birthdate) VALUES (:username, :password, :email, :firstname, :lastname, :sex, :birthdate)");
 		
 		# Execute the query
 		$STH->execute($data);
