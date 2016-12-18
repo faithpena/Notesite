@@ -3,6 +3,7 @@
 	require "../model/set_user.php";
 	require "../model/get_user.php";
 	require "../model/create_admin.php";
+	require "../model/get_admin.php";
 
 	# Needed to access the session variables
 	session_start();
