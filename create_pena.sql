@@ -1,5 +1,4 @@
-CREATE DATABASE faithpena;
-\c pena
+\c postgresql-elliptical-60301
 
 DROP TABLE admin;
 DROP TABLE cart;
