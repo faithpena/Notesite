@@ -37,7 +37,7 @@
 
 		$birthdate[] = '</select></div><div class="col-md-4"><select class="form-control" name="year" style="width:5.75em">';
 
-		for($i = 2016; $i >= 1990; $i--) {
+		for($i = 2016; $i >= 1900; $i--) {
 			if (!$user) {
 				$birthdate[] = '<option value=' . $i . '>' . $i . '</option>';
 			}

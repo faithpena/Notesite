@@ -23,7 +23,7 @@
 		}
 	}
 	else {
-		print "Did not successfully login";
+		$_SESSION['unsuccessful login'] = 1;
 	}
 
 	# Redirect to index.php

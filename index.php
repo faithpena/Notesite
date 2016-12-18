@@ -275,12 +275,12 @@
         <?php if(!isset($_SESSION['userid'])): ?>
             <p class="lead">Sign Up</p>
              <form action="controller/signup.php" method="post">
-                <input class="form-control" type="text" placeholder="Username" name="username" /><br>
-                <input class="form-control" type="password" placeholder="Password" name="password" /><br>
-                <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" /><br>
-                <input class="form-control" type="text" placeholder="Email" name="email" /><br>
-                <input class="form-control" type="text" placeholder="First Name" name="firstname" /><br>
-                <input class="form-control" type="text" placeholder="Last Name" name="lastname" /><br>
+                <input class="form-control" type="text" placeholder="Username" name="username" maxlength="30" required/><br>
+                <input class="form-control" type="password" placeholder="Password" name="password" maxlength="30" required/><br>
+                <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" maxlength="30" required/><br>
+                <input class="form-control" type="text" placeholder="Email" name="email" required/><br>
+                <input class="form-control" type="text" placeholder="First Name" name="firstname" required/><br>
+                <input class="form-control" type="text" placeholder="Last Name" name="lastname" required/><br>
                 Sex
                 <label class="radio-inline"><input type="radio" style="padding: 5px" name="sex" value="male" checked>Male</label> 
                 <label class="radio-inline"><input type="radio" style="padding: 5px" name="sex" value="female">Female</label>
@@ -290,6 +290,7 @@
                     <?= birthdate_select(); ?><br>
                 </div>
                 <br>
+                <input class="form-control" type="text" placeholder="Contact Number" name="contactno" required/><br> 
                 <input class="btn btn-default" type="submit" value="Sign up" />
             </form>
         <?php else: ?>
