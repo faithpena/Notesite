@@ -26,5 +26,7 @@
 
 	add_product($prodname, $subjid, $quantity, $price, $description, $isavailable);
 
+	$_SESSION['Successful add product'] = 1;
+
 	header("Location: ../add_product.php");
 ?>

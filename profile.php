@@ -28,19 +28,19 @@
 	</head>
 
 	<body>
-		<?php if(isset($_SESSION['Passwords do not match'])): ?>
+		 <?php if (isset($_SESSION['Passwords do not match'])): ?>
+	        <div class="alert alert-danger">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Confirmation Error!</strong> Passwords do not match.
+	        </div>
 
-			<script type="text/javascript">  
-				alert("Passwords do not match");  //Pop up appears during signup
-			</script>
-
-			<?php unset($_SESSION['Passwords do not match']); ?>  <!-- Unsets the session variable so the pop up will disappear -->
+	        <?php unset($_SESSION['Passwords do not match']); ?>
 
 		<?php elseif(isset($_SESSION['Not your password'])): ?>
-
-			<script type="text/javascript">  
-				alert("Incorrect password");  //Pop up appears during signup
-			</script>
+			<div class="alert alert-danger">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Confirmation Error!</strong> Password is incorrect.
+	        </div>
 
 			<?php unset($_SESSION['Not your password']); ?>  <!-- Unsets the session variable so the pop up will disappear -->
 
@@ -48,9 +48,10 @@
 
 		<?php if(isset($_SESSION['Username is already taken'])): ?>
 
-			<script type="text/javascript">  
-				alert("Username is already taken");  //Pop up appears during signup
-			</script>
+			<div class="alert alert-warning">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Username already in use!</strong> Please choose another username.
+	        </div>
 
 			<?php unset($_SESSION['Username is already taken']); ?>  <!-- Unsets the session variable so the pop up will disappear -->
 

@@ -30,13 +30,41 @@
 	<body>
 		<?php if(isset($_SESSION['too much quantity'])): ?>
 
-			<script type="text/javascript">  
-				alert("too much quantity"); 
-			</script>
+			<div class="alert alert-danger">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Success!</strong> Product was successfully added.
+	        </div>
 
 			<?php unset($_SESSION['too much quantity']); ?>  <!-- Unsets the session variable so the pop up will disappear -->
 
 		<?php endif; ?>
+
+		<?php if (isset($_SESSION['Successful add product'])): ?>
+	        <div class="alert alert-success">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Success!</strong> Product was successfully added.
+	        </div>
+
+	        <?php unset($_SESSION['Successful add product']); ?>
+	    <?php endif; ?>
+
+	    <?php if (isset($_SESSION['Successful delete product'])): ?>
+	        <div class="alert alert-success">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Success!</strong> Product was successfully deleted.
+	        </div>
+
+	        <?php unset($_SESSION['Successful delete product']); ?>
+	    <?php endif; ?>
+
+	     <?php if (isset($_SESSION['Successful update product'])): ?>
+	        <div class="alert alert-success">
+	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	          <strong>Success!</strong> Product was successfully updated.
+	        </div>
+
+	        <?php unset($_SESSION['Successful update product']); ?>
+	    <?php endif; ?>
 
 		<!-- Navigation -->
 	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

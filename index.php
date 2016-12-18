@@ -111,6 +111,15 @@
         <?php unset($_SESSION['unsuccessful login']); ?>
     <?php endif; ?>
 
+     <?php if (isset($_SESSION['Username already in use'])): ?>
+        <div class="alert alert-warning">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Username already in use!</strong> Please choose another username.
+        </div>
+
+        <?php unset($_SESSION['Username already in use']); ?>
+    <?php endif; ?>
+
     <?php if (isset($_SESSION['Passwords do not match'])): ?>
         <div class="alert alert-danger">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -118,15 +127,6 @@
         </div>
 
         <?php unset($_SESSION['Passwords do not match']); ?>
-    <?php endif; ?>
-
-    <?php if (isset($_SESSION['Username already in use'])): ?>
-        <div class="alert alert-warning">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Username already in use!</strong> Please choose another username.
-        </div>
-
-        <?php unset($_SESSION['Username already in use']); ?>
     <?php endif; ?>
 
     <?php if (isset($_SESSION['Successful signup'])): ?>
@@ -314,7 +314,7 @@
                 <input class="form-control" type="text" placeholder="Username" name="username" maxlength="30" required/><br>
                 <input class="form-control" type="password" placeholder="Password" name="password" maxlength="30" required/><br>
                 <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" maxlength="30" required/><br>
-                <input class="form-control" type="text" placeholder="Email" name="email" required/><br>
+                <input class="form-control" type="text" placeholder="Email" name="email" maxlength="50" required/><br>
                 <input class="form-control" type="text" placeholder="First Name" name="firstname" required/><br>
                 <input class="form-control" type="text" placeholder="Last Name" name="lastname" required/><br>
                 Sex
@@ -326,7 +326,7 @@
                     <?= birthdate_select(); ?><br>
                 </div>
                 <br>
-                <input class="form-control" type="text" placeholder="Contact Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11" name="contactno" required/><br>
+                <input class="form-control" type="text" placeholder="Contact Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="contactno"  maxlength="11" required/><br>
                 <input class="btn btn-default" type="submit" value="Sign up" />
             </form>
         <?php else: ?>

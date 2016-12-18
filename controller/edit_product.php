@@ -30,6 +30,8 @@
 	
 	update_product($prodid, $prodname, $subjid, $quantity, $price, $description, $isavailable);
 
+	$_SESSION['Successful update product'] = 1;
+
 	# Redirect to index.php
 	header("Location: ../products.php");
 ?>

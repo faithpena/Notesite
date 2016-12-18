@@ -92,26 +92,28 @@
 	    		<div class="col-md-4">
 					<form action="controller/edit_profile.php" method="post">
 						<label>Username</label>
-						<input class="form-control" type="text" placeholder="Username" name="username" value="<?= $user->username ?>"/><br>
+						<input class="form-control" type="text" placeholder="Username" name="username" maxlength="30" value="<?= $user->username ?>"/><br>
 						<label>First Name</label>
-						<input class="form-control" type="text" placeholder="Firstname" name="firstname" value="<?= $user->firstname ?>"/><br>
+						<input class="form-control" type="text" placeholder="Firstname" name="firstname" maxlength="30" value="<?= $user->firstname ?>"/><br>
 						<label>Last Name</label>
-						<input class="form-control" type="text" placeholder="Lastname" name="lastname" value="<?= $user->lastname ?>"/><br>
+						<input class="form-control" type="text" placeholder="Lastname" name="lastname" maxlength="30" value="<?= $user->lastname ?>"/><br>
 						<label>Email</label>
-						<input class="form-control" type="text" placeholder="Email" name="email" value="<?= $user->email ?>" /><br>
+						<input class="form-control" type="text" placeholder="Email" name="email" maxlength="50" value="<?= $user->email ?>" /><br>
 						<label>Sex  </label>
 						<?php if ($user->sex == "male"): ?>   
 							<input type="radio" name="sex" value="male" style="margin:5px" checked> Male  
 							<input type="radio" name="sex" value="female"> Female<br>
 						<?php else: ?>
 							<input class="radio-inline" type="radio" name="sex" value="male" style="margin:5px"> Male  
-							<input class="radio-inline" type="radio" name="sex" value="female" checked> Female<br>
+							<input class="radio-inline" type="radio" name="sex" value="female" checked> Female<br>maxlength="50" 
 						<?php endif; ?><br>
 						<label>Birthdate</label>
 						<div class="row">
 							<?=	birthdate_select($user); ?><br>
 				   		</div>
 				   		<br>
+				   		<label>Contact Number</label>
+				   		<input class="form-control" type="text" placeholder="Contact Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="contactno"  maxlength="11" value="<?= $user->contactno ?>" required/><br>
 				   		<label>Password Confirmation</label>
 				        <input class="form-control" type="password" placeholder="Password" name="password" /><br>
 						<input class="btn btn-default" type="submit" value="Edit profile"/>
