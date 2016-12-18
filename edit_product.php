@@ -98,13 +98,13 @@
 					<label>Product Name</label>
 					<input class="form-control" type="text" name="prodname" maxlength="30" value="<?= $prodname ?>" required/><br>
 					<label>Subject</label>
-					<input class="form-control" type="text" name="subjname" maxlength="15" value="<?= $subjname ?>" required/><br>
+					<input class="form-control" type="text" name="subjname" maxlength="25" value="<?= $subjname ?>" required/><br>
 					<label>Quantity</label>
 					<input class="form-control" type="number" min="0" name="quantity" value="<?= $quantity ?>" required/><br>
 					<label>Price</label>
 					<input class="form-control" type="number" min="0" step="0.01" name="price" value="<?= $price ?>" required/><br>
 					<label>Description</label>
-					<textarea style="resize: none" class="form-control" type="text" name="description" maxlength="250" value="<?= $description ?>"><?= $description ?></textarea><br>
+					<textarea style="resize: none" class="form-control" type="text" name="description" maxlength="350" value="<?= $description ?>"><?= $description ?></textarea><br>
 					<input class="btn btn-default" type="submit" value="Edit Product"/>
 				</form>
 			</div>

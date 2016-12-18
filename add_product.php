@@ -90,13 +90,13 @@
 					<label>Product Name</label>
 					<input class="form-control" type="text" placeholder="Product Name" name="prodname" maxlength="30" value="" required/><br>
 					<label>Subject</label>
-					<input class="form-control" type="text" placeholder="Subject" name="subjname" maxlength="15" required/><br>
+					<input class="form-control" type="text" placeholder="Subject" name="subjname" maxlength="25" required/><br>
 					<label>Quantity</label>
 					<input class="form-control" type="number" min="0" step="1.0" placeholder="Quantity" name="quantity" required/><br>
 					<label>Price</label>
 					<input class="form-control" type="number" min="0" step="0.25" placeholder="Price" name="price" required/><br>
 					<label>Description</label>
-					<textarea style="resize: none" class="form-control" type="text" placeholder="Description" name="description" maxlength="250"></textarea><br>
+					<textarea style="resize: none" class="form-control" type="text" placeholder="Description" name="description" maxlength="350"></textarea><br>
 					
 					<input class="btn btn-control" type="submit" value="Add Product"/>
 				</form>

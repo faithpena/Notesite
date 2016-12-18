@@ -92,20 +92,20 @@
 	    		<div class="col-md-4">
 					<form action="controller/edit_profile.php" method="post">
 						<label>Username</label>
-						<input class="form-control" type="text" placeholder="Username" name="username" maxlength="30" value="<?= $user->username ?>"/><br>
+						<input class="form-control" type="text" placeholder="Username" name="username" maxlength="30" value="<?= $user->username ?>" required/><br>
 						<label>First Name</label>
-						<input class="form-control" type="text" placeholder="Firstname" name="firstname" maxlength="30" value="<?= $user->firstname ?>"/><br>
+						<input class="form-control" type="text" placeholder="Firstname" name="firstname" maxlength="50" value="<?= $user->firstname ?>" required/><br>
 						<label>Last Name</label>
-						<input class="form-control" type="text" placeholder="Lastname" name="lastname" maxlength="30" value="<?= $user->lastname ?>"/><br>
+						<input class="form-control" type="text" placeholder="Lastname" name="lastname" maxlength="50" value="<?= $user->lastname ?>" required/><br>
 						<label>Email</label>
-						<input class="form-control" type="text" placeholder="Email" name="email" maxlength="50" value="<?= $user->email ?>" /><br>
+						<input class="form-control" type="text" placeholder="Email" name="email" maxlength="50" value="<?= $user->email ?>" required/><br>
 						<label>Sex  </label>
 						<?php if ($user->sex == "male"): ?>   
 							<input type="radio" name="sex" value="male" style="margin:5px" checked> Male  
 							<input type="radio" name="sex" value="female"> Female<br>
 						<?php else: ?>
 							<input class="radio-inline" type="radio" name="sex" value="male" style="margin:5px"> Male  
-							<input class="radio-inline" type="radio" name="sex" value="female" checked> Female<br>maxlength="50" 
+							<input class="radio-inline" type="radio" name="sex" value="female" checked> Female<br>
 						<?php endif; ?><br>
 						<label>Birthdate</label>
 						<div class="row">

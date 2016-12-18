@@ -29,7 +29,14 @@
 			$_SESSION['Successful signup'] = 1;
 		}
 		else {
-			$_SESSION['Username already in use'] = 1;
+			if(get_admin(get_user($username)->userid)) {
+				$password = password_hash($password, PASSWORD_DEFAULT);
+				set_admin(get_user($username)->userid, $username, $password, $email, $firstname, $lastname, $sex, $month, $day, $year);
+				$_SESSION['Successful signup'] = 1;
+			}
+			else {
+				$_SESSION['Username already in use'] = 1;
+			}
 		}
 	}
 

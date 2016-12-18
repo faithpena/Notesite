@@ -315,8 +315,8 @@
                 <input class="form-control" type="password" placeholder="Password" name="password" maxlength="30" required/><br>
                 <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" maxlength="30" required/><br>
                 <input class="form-control" type="text" placeholder="Email" name="email" maxlength="50" required/><br>
-                <input class="form-control" type="text" placeholder="First Name" name="firstname" required/><br>
-                <input class="form-control" type="text" placeholder="Last Name" name="lastname" required/><br>
+                <input class="form-control" type="text" placeholder="First Name" name="firstname" maxlength="50" required/><br>
+                <input class="form-control" type="text" placeholder="Last Name" name="lastname" maxlength="50" required/><br>
                 Sex
                 <label class="radio-inline"><input type="radio" style="padding: 5px" name="sex" value="male" checked>Male</label> 
                 <label class="radio-inline"><input type="radio" style="padding: 5px" name="sex" value="female">Female</label>
