@@ -4,6 +4,7 @@
 	require "../model/get_user.php";
 	require "../model/create_admin.php";
 	require "../model/get_admin.php";
+	require "../model/set_admin.php";
 
 	# Needed to access the session variables
 	session_start();
@@ -34,8 +35,10 @@
 			echo 'IT WENT OVER HERE';
 			echo get_user($username)->userid;
 			if(get_admin(get_user($username)->userid)) {
+				echo 'IT WENT HERE WAJA';
 				$password = password_hash($password, PASSWORD_DEFAULT);
 				set_admin(get_user($username)->userid, $username, $password, $email, $firstname, $lastname, $sex, $month, $day, $year);
+				echo 'Made it';
 				$_SESSION['Successful signup'] = 1;
 			}
 			else {
