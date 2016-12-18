@@ -89,11 +89,11 @@
 	    		<div class="col-md-4">
 					<form action="controller/edit_password.php" method="post">
 						<label>Current Password</label>
-				        <input class="form-control" type="password" placeholder="Current Password" name="password" maxlength="30"/><br>
+				        <input class="form-control" type="password" placeholder="Current Password" name="password" required/><br>
 				        <label>New Password</label>
-				        <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" maxlength="30"/><br>
+				        <input class="form-control" type="password" placeholder="Confirm Password" name="confirmPassword" required/><br>
 				        <label>Password Confirmation</label>
-				        <input class="form-control" type="password" placeholder="New Password" name="newPassword" maxlength="30"/><br>
+				        <input class="form-control" type="password" placeholder="New Password" name="newPassword" required/><br>
 						<input class="btn btn-default" type="submit" value="Edit Password"/>
 					</form>
 				</div>
