@@ -9,10 +9,13 @@
 	$quantity = $_POST['quantity'];
 	$prodid = $_POST['prodid'];
 
+	echo 'Did it even go over here';
+
 	$cart = check_cart($_SESSION['userid'], $prodid);
 
 	if(isset($cart))
 	{
+		echo 'Should not go here';
 		$quantity = $quantity + $cart->itemquantity;
 
 		if($quantity > $cart->quantity)
@@ -27,9 +30,10 @@
 	}
 	else
 	{
+		echo 'Nice it went here';
 		add_to_cart($_SESSION['userid'], $prodid, $quantity);
 	}
 
-	header("Location: ../products.php");
+	//header("Location: ../products.php");
 
 ?>
