@@ -69,7 +69,7 @@
 			if (isset($_SESSION['userid'])) {
 				$table .= '<td>';
 				$table .= '<form action="controller/add_to_cart.php" method="post">
-							  <input class="form-control" type="number" name="quantity" style="width: 5em" min="1" max=' . $product->quantity . ' value=1/>
+							  <input class="form-control" type="number" name="quantity" style="width: 5em" min="1" max=' . $product->quantity . ' value="1"/>
 							  </td><td><input class="btn btn-default" type="submit" value="Add to Cart" />
 							  <input type="hidden" name="prodid" value="' . $product->prodid . '"/>
 						   </form>';
