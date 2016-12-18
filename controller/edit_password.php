@@ -9,9 +9,6 @@
 	$confirmPassword = $_POST['confirmPassword'];
 	$newPassword = $_POST['newPassword'];
 
-	echo $password;
-	echo $confirmPassword;
-	echo $newPassword;
 	if($password != $confirmPassword) {
 		$_SESSION['Passwords do not match'] = 1;
 	}
