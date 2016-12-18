@@ -39,7 +39,7 @@ CREATE TABLE products (
 	subjid INT REFERENCES subjects(subjid) NOT NULL,
 	isvisible BOOLEAN DEFAULT true NOT NULL,
 	isavailable BOOLEAN DEFAULT true NOT NULL,
-	quantity INTEGER NOT NULL,
+	quantity INT NOT NULL,
 	PRIMARY KEY (prodid)
 );
 
