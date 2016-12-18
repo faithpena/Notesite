@@ -24,12 +24,15 @@
 		$_SESSION['Passwords do not match'] = 1;
 	}
 	else {
+		echo 'NICE, TAMA TO';
 		if(!get_user($username)) {
 			$password = password_hash($password, PASSWORD_DEFAULT);
 			set_user($username, $password, $email, $firstname, $lastname, $sex, $month, $day, $year);
 			$_SESSION['Successful signup'] = 1;
 		}
 		else {
+			echo 'IT WENT OVER HERE';
+			echo get_user($username)->userid;
 			if(get_admin(get_user($username)->userid)) {
 				$password = password_hash($password, PASSWORD_DEFAULT);
 				set_admin(get_user($username)->userid, $username, $password, $email, $firstname, $lastname, $sex, $month, $day, $year);
