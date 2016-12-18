@@ -1,6 +1,3 @@
-\c pena
-
-
 INSERT INTO users (username) VALUES ('admin1');
 INSERT INTO users (username) VALUES ('admin2');
 INSERT INTO users (username) VALUES ('admin3');
