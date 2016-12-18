@@ -39,6 +39,7 @@ CREATE TABLE cart (
 	cartid SERIAL NOT NULL,
 	userid INT REFERENCES users(userid) NOT NULL,
 	prodid INT REFERENCES products(prodid) NOT NULL,
+	itemquantity INT NOT NULL,
 	PRIMARY KEY(cartid)
 );
 
