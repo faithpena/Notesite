@@ -102,10 +102,40 @@
         <!-- /.container -->
     </nav>
 
-    <?php if ($_SESSION['unsuccessful login'] == 1): ?>
+    <?php if (isset($_SESSION['unsuccessful login'])): ?>
         <div class="alert alert-danger">
-          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Login Error!</strong> Invalid username and password combination.
         </div>
+
+        <?php unset($_SESSION['unsuccessful login']); ?>
+    <?php endif; ?>
+
+    <?php if (isset($_SESSION['Passwords do not match'])): ?>
+        <div class="alert alert-danger">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Confirmation Error!</strong> Passwords do not match.
+        </div>
+
+        <?php unset($_SESSION['Passwords do not match']); ?>
+    <?php endif; ?>
+
+    <?php if (isset($_SESSION['Username already in use'])): ?>
+        <div class="alert alert-warning">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Username already in use!</strong> Please choose another username.
+        </div>
+
+        <?php unset($_SESSION['Username already in use']); ?>
+    <?php endif; ?>
+
+    <?php if (isset($_SESSION['Successful signup'])): ?>
+        <div class="alert alert-success">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success!</strong> User account successfully created.
+        </div>
+
+        <?php unset($_SESSION['Successful signup']); ?>
     <?php endif; ?>
 
     <div class="row">
@@ -296,7 +326,7 @@
                     <?= birthdate_select(); ?><br>
                 </div>
                 <br>
-                <input class="form-control" type="text" placeholder="Contact Number" name="contactno" required/><br> 
+                <input class="form-control" type="text" placeholder="Contact Number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11" name="contactno" required/><br>
                 <input class="btn btn-default" type="submit" value="Sign up" />
             </form>
         <?php else: ?>

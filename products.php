@@ -31,7 +31,7 @@
 		<?php if(isset($_SESSION['too much quantity'])): ?>
 
 			<script type="text/javascript">  
-				alert("too much quantity");  //Pop up appears during signup
+				alert("too much quantity"); 
 			</script>
 
 			<?php unset($_SESSION['too much quantity']); ?>  <!-- Unsets the session variable so the pop up will disappear -->

@@ -26,6 +26,7 @@
 		if(!get_user($username)) {
 			$password = password_hash($password, PASSWORD_DEFAULT);
 			set_user($username, $password, $email, $firstname, $lastname, $sex, $month, $day, $year);
+			$_SESSION['Successful signup'] = 1;
 		}
 		else {
 			$_SESSION['Username already in use'] = 1;
