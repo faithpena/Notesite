@@ -102,6 +102,12 @@
         <!-- /.container -->
     </nav>
 
+    <?php if ($_SESSION['unsuccessful login'] == 1): ?>
+        <div class="alert alert-danger">
+          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+    <?php endif; ?>
+
     <div class="row">
         <div class="col-md-8">
             <!-- Page Content -->
