@@ -1,11 +1,10 @@
 DROP TABLE admin;
 DROP TABLE orders;
+DROP TABLE cart;
+DROP TABLE order_history;
 DROP TABLE users;
 DROP TABLE subjects;
 DROP TABLE products;
-DROP TABLE cart;
-DROP TABLE order_history;
-
 
 CREATE TABLE users (
   userid SERIAL NOT NULL,
