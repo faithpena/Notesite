@@ -182,6 +182,7 @@
 
                     </div>
                 </div>
+            </div>
         <div class="col-md-3">
         <?php if(!isset($_SESSION['userid'])): ?>
             <p class="lead">Sign Up</p>
