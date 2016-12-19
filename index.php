@@ -230,22 +230,6 @@
         </div>
     </div>
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col">
-                    <h3>Follow us at https://twitter.com/Notesite_</h3>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
