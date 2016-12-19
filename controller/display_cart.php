@@ -13,7 +13,7 @@
 		{
 			$table .= '<tr>';
 
-			$table .= '<td style="width: 50px">';
+			$table .= '<td style="width: 80px">';
 			$table .= $item->prodname;
 			$table .= '</td>';
 
@@ -21,7 +21,7 @@
 			$table .= '<input onchange="change(this.value, ' . $item->cartid . ');" class="form-control" style="width: 70px;"type="number" min="1" max=' . $item->quantity . ' name="quantity" value=' . $item->itemquantity . ' />';
 			$table .= '</td>';
 
-			$table .= '<td>';
+			$table .= '<td style="width: 30px">';
 			$table .= $item->price * $item->itemquantity;
 			$table .= '</td>';	
 
