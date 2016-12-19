@@ -32,7 +32,7 @@
 
 			<div class="alert alert-danger">
 	          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	          <strong>Success!</strong> Product was successfully added.
+	          <strong>Too much quantity!</strong> Stock is not enough.
 	        </div>
 
 			<?php unset($_SESSION['too much quantity']); ?>  <!-- Unsets the session variable so the pop up will disappear -->
