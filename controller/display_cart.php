@@ -13,7 +13,7 @@
 		{
 			$table .= '<tr>';
 
-			$table .= '<td style="width: 75px>';
+			$table .= '<td style="width: 50px">';
 			$table .= $item->prodname;
 			$table .= '</td>';
 
