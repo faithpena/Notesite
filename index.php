@@ -147,7 +147,7 @@
 
                    
 
-                    <div class="col-md-9" style="margin: 20px">
+                    <div class="col-md-8" style="margin: 20px">
 
                         <div class="row carousel-holder">
 
@@ -184,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
         <?php if(!isset($_SESSION['userid'])): ?>
             <p class="lead">Sign Up</p>
              <form action="controller/signup.php" method="post">
