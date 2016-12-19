@@ -1,5 +1,5 @@
 function change(quantity, id, max) {
-	if (!isNaN(parseFloat(quantity)) && isFinite(quantity) && quantity <= max)
+	if (Number(parseFloat(quantity)) == quantity && quantity <= max)
 	{
 		$.ajax({
 	        type: "POST",

@@ -18,7 +18,7 @@
 			$table .= '</td>';
 
 			$table .= '<td>';
-			$table .= '<input onchange="change(this.value, ' . $item->cartid . ', ' . $item->quantity . ');" class="form-control" style="width: 70px;"type="number" min="1" max=' . $item->quantity . ' name="quantity" value=' . $item->itemquantity . ' />';
+			$table .= '<input onchange="change(this.value, ' . $item->cartid . ', ' . $item->quantity . ');" class="form-control" style="width: 70px;" type="number" min="1" max=' . $item->quantity . ' name="quantity" value=' . $item->itemquantity . ' />';
 			$table .= '</td>';
 
 			$table .= '<td style="width: 30px">';
