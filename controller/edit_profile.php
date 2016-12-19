@@ -15,19 +15,20 @@
 	$day = $_POST['day'];
 	$year = $_POST['year'];
 	$birthdate = $year . '-' . date('m', strtotime($month)) . '-' . $day;
+	$contactno = $_POST['contactno'];
 
 	# Check if the username is already in use
 	$user = (get_user($username));
 	if(isset($user->userid) && ($_SESSION['userid'] == $user->userid) && password_verify($password, $user->password))
 	{
-		update_user($_SESSION['userid'], $username, $email, $firstname, $lastname, $sex, $birthdate);
+		update_user($_SESSION['userid'], $username, $email, $firstname, $lastname, $sex, $birthdate, $contactno);
 
 		# Update user details
 		$_SESSION['username'] = $username;
 	}
 	elseif(!isset($user->userid) && password_verify($password, $user->password))
 	{
-		update_user($_SESSION['userid'], $username, $email, $firstname, $lastname, $sex, $birthdate);
+		update_user($_SESSION['userid'], $username, $email, $firstname, $lastname, $sex, $birthdate, $contactno);
 
 		# Update user details
 		$_SESSION['username'] = $username;
