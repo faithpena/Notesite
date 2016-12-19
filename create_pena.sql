@@ -3,8 +3,8 @@ DROP TABLE orders;
 DROP TABLE cart;
 DROP TABLE order_history;
 DROP TABLE users;
-DROP TABLE subjects;
 DROP TABLE products;
+DROP TABLE subjects;
 
 CREATE TABLE users (
   userid SERIAL NOT NULL,
