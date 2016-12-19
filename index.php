@@ -147,7 +147,7 @@
 
                    
 
-                    <div class="col-md-8" style="margin: 20px">
+                    <div class="col-md-9" style="margin: 20px">
 
                         <div class="row carousel-holder">
 
@@ -160,13 +160,13 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="item active">
-                                            <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                            <img class="slide-image" src="page1.png" alt="">
                                         </div>
                                         <div class="item">
-                                            <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                            <img class="slide-image" src="page2.png" alt="">
                                         </div>
                                         <div class="item">
-                                            <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                            <img class="slide-image" src="page3.png" alt="">
                                         </div>
                                     </div>
                                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -184,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <?php if(!isset($_SESSION['userid'])): ?>
             <p class="lead">Sign Up</p>
              <form action="controller/signup.php" method="post">
