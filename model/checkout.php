@@ -30,7 +30,7 @@
 			
 			foreach($carts as $cart)
 			{
-				$total .= $cart->price * $cart->itemquantity;
+				$total = $total + ($cart->price * $cart->itemquantity);
 				$data = array('orderid' => $orderid[0]->orderid, 'prodid' => $cart->prodid, 'itemquantity' => $cart->itemquantity, 'currprice' => $cart->price);
 				$STH = $DBH->prepare('INSERT INTO orders (orderid, prodid, itemquantity, currprice) VALUES (:orderid, :prodid, :itemquantity, :currprice)');
 				$STH->execute($data);
