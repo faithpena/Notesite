@@ -237,8 +237,8 @@
         <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                <div class="col-lg-9">
+                    <p>Follow us at https://twitter.com/Notesite_</p>
                 </div>
             </div>
         </footer>
